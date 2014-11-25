@@ -1,6 +1,28 @@
-# Mb-tabs
+# MB-Tabs
 
-This README outlines the details of collaborating on this Ember addon.
+WiP
+
+```handlebars
+{{#tabs-pane active=activeTab}}  
+  {{#tabs-nav}}
+    {{#tabs-nav-item name="foo"}}Foo{{/tabs-nav-item}}
+    {{#tabs-nav-item name="bar"}}Bar{{/tabs-nav-item}}
+    {{#tabs-nav-item name="baz"}}Baz{{/tabs-nav-item}}
+  {{/tabs-nav}}
+
+  {{#tab-panel name="foo"}}
+    Content for Foo
+  {{/tab-panel}}
+
+  {{#tab-panel name="bar"}}
+    Content for Bar
+  {{/tab-panel}}
+
+  {{#tab-panel name="baz"}}
+    Content for Baz
+  {{/tab-panel}}
+{{/tabs-pane}}
+```
 
 ## Installation
 
