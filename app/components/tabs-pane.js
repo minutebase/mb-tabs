@@ -11,7 +11,7 @@ export default Ember.Component.extend({
   active:       null, // current active tab
 
   orientationClass: function() {
-    return `tabs--${this.get("orientation")}`;
+    return "tabs--"+this.get("orientation");
   }.property("orientation")
 
 });
