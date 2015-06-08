@@ -7,17 +7,17 @@ export default Ember.Component.extend({
   name:     null,
   _manager: null,
 
-  activeClass: function() {
+  activeClass: Ember.computed("isActive", function() {
     if (this.get("isActive")) {
       return "tabs__tab--active";
     }
-  }.property("isActive"),
+  }),
 
-  isActive: function() {
+  isActive: Ember.computed("name", "_manager.active", function() {
     return this.get("name") === this.get("_manager.active");
-  }.property("name", "_manager.active"),
+  }),
 
-  setupManager: function() {
+  setupManager: Ember.on("init", function() {
     var manager = this.nearestWithProperty("isTabPane");
     this.set("_manager", manager);
 
@@ -26,10 +26,10 @@ export default Ember.Component.extend({
     if (!manager.get("active")) {
       manager.set("active", this.get("name"));
     }
-  }.on("init"),
+  }),
 
-  setActiveTabOnClick: function() {
+  setActiveTabOnClick: Ember.on("click", function() {
     this.get("_manager").set("active", this.get("name"));
-  }.on("click")
+  })
 
 });

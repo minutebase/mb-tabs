@@ -10,8 +10,8 @@ export default Ember.Component.extend({
   orientation: "horizontal",
   active:       null, // current active tab
 
-  orientationClass: function() {
+  orientationClass: Ember.computed("orientation", function() {
     return "tabs--"+this.get("orientation");
-  }.property("orientation")
+  })
 
 });
