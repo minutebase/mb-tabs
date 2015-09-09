@@ -1,28 +1,45 @@
 # MB-Tabs
 
-WiP
+```handlebars
+{{#tabbed-content active=active on-change="changeTab" as |manager|}}
+  <div class="tabs__nav">
+    {{#tab-button manager=manager name="one"}}One{{/tab-button}}
+    {{#tab-button manager=manager name="two"}}Two{{/tab-button}}
+    {{#tab-button manager=manager name="three"}}Three{{/tab-button}}
+  </div>
+
+  {{#tab-panel manager=manager name="one"}}
+    Tab One
+  {{/tab-panel}}
+
+  {{#tab-panel manager=manager name="two"}}
+    Tab Two
+  {{/tab-panel}}
+
+  {{#tab-panel manager=manager name="three"}}
+    Tab Three
+  {{/tab-panel}}
+{{/tabbed-content}}
+```
+
+## Override Active class
+
+The tab button gets a class (default `active`) when active.
+To change this class, either set `active-class` on the content or button:
 
 ```handlebars
-{{#tabs-pane active=activeTab}}  
-  {{#tabs-nav}}
-    {{#tabs-nav-item name="foo"}}Foo{{/tabs-nav-item}}
-    {{#tabs-nav-item name="bar"}}Bar{{/tabs-nav-item}}
-    {{#tabs-nav-item name="baz"}}Baz{{/tabs-nav-item}}
-  {{/tabs-nav}}
-
-  {{#tab-panel name="foo"}}
-    Content for Foo
-  {{/tab-panel}}
-
-  {{#tab-panel name="bar"}}
-    Content for Bar
-  {{/tab-panel}}
-
-  {{#tab-panel name="baz"}}
-    Content for Baz
-  {{/tab-panel}}
-{{/tabs-pane}}
+  {{#tabbed-content active-class="active-button"}}
 ```
+
+```handlebars
+  {{#tab-button active-class="active-button"}}
+```
+
+## Actions
+
+The `tabbed-content` component sends `on-change` when a button is clicked.
+
+Respond to this and update `active` for the tab to change
 
 ## Installation
 
