@@ -1,3 +1,25 @@
-<h2 id="title">Welcome to Ember.js</h2>
+<h2 id="title">mb-tabs</h2>
 
-{{outlet}}
+{{#tabbed-content active=active class="tabs" on-change="changeTab" active-class="tabs__button--active" as |manager|}}
+
+  <div class="tabs__nav">
+    {{#tab-button manager=manager class="tabs__button" name="one"}}One{{/tab-button}}
+    {{#tab-button manager=manager class="tabs__button" name="two"}}Two{{/tab-button}}
+    {{#tab-button manager=manager class="tabs__button" active-class="tabs__button--active2" name="three"}}Three{{/tab-button}}
+  </div>
+
+  {{#tab-panel manager=manager name="one" class="tabs__panel"}}
+    Tab One
+  {{/tab-panel}}
+
+  {{#tab-panel manager=manager name="two" class="tabs__panel"}}
+    Tab Two
+  {{/tab-panel}}
+
+  {{#tab-panel manager=manager name="three" class="tabs__panel"}}
+    Tab Three
+  {{/tab-panel}}
+
+{{/tabbed-content}}
+
+Active Tab {{active}}

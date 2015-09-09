@@ -1,3 +1,32 @@
 html, body {
   margin: 20px;
 }
+
+.tabs {
+  border: 1px solid #CCC;
+}
+
+.tabs__nav {
+  border-bottom: 1px solid #CCC;
+  padding: 10px 0 0 10px;
+}
+
+.tabs__button {
+  border: 1px solid #CCC;
+  border-bottom: none;
+  display: inline-block;
+  padding: 10px;
+}
+
+.tabs__button--active {
+  background-color: #CCC;
+}
+
+.tabs__button--active2 {
+  background-color: red;
+}
+
+.tabs__panel {
+  padding: 10px;
+  min-height: 200px;
+}
