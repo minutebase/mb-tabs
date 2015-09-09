@@ -1,6 +1,6 @@
 {
   "name": "mb-tabs",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Simple tabs for Ember",
   "directories": {
     "doc": "doc",
@@ -40,7 +40,9 @@
     "ember-try": "0.0.6"
   },
   "keywords": [
-    "ember-addon", "tabs", "ui"
+    "ember-addon",
+    "tabs",
+    "ui"
   ],
   "dependencies": {
     "ember-cli-babel": "^5.1.3"
