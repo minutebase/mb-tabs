@@ -2,5 +2,5 @@
 'use strict';
 
 module.exports = {
-  name: 'mb-tabs'
+  name: 'ember-mb-tabs'
 };

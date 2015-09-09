@@ -1,5 +1,5 @@
 {
-  "name": "mb-tabs",
+  "name": "ember-mb-tabs",
   "version": "0.1.0",
   "description": "Simple tabs for Ember",
   "directories": {
