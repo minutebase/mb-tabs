@@ -1,15 +1,2 @@
-import Ember from 'ember';
-
-export default Ember.Component.extend({
-
-  active: null,
-
-  "active-class": "active",
-
-  actions: {
-    select(tab) {
-      this.sendAction("on-change", tab);
-    }
-  }
-
-});
+import TabbedContentComponent from 'ember-mb-tabs/components/tabbed-content';
+export default TabbedContentComponent;
